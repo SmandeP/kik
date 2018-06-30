@@ -1,0 +1,26 @@
+# /etc/conf.d/chronosd: config file for /etc/init.d/chronosd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/chronos/chronos.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/chronosd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/chronosd.pid"
+
+# Where to write chronosd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/chronosd"
+
+# User and group to own chronosd process
+#BITCOIND_USER="chronos"
+#BITCOIND_GROUP="chronos"
+
+# Path to chronosd executable
+#BITCOIND_BIN="/usr/bin/chronosd"
+
+# Nice value to run chronosd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

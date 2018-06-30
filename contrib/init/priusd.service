@@ -1,0 +1,26 @@
+[Unit]
+Description=Chronos's distributed currency daemon
+After=network.target
+
+[Service]
+User=chronos
+Group=chronos
+
+Type=forking
+PIDFile=/var/lib/chronosd/chronosd.pid
+
+ExecStart=/usr/bin/chronosd -daemon -pid=/var/lib/chronosd/chronosd.pid \
+          -conf=/etc/chronos/chronos.conf -datadir=/var/lib/chronosd
+
+ExecStop=-/usr/bin/chronos-cli -conf=/etc/chronos/chronos.conf \
+         -datadir=/var/lib/chronosd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

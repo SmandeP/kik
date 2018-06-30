@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Chronos
+Comment=Chronos P2P Cryptocurrency
+Comment[fr]=Chronos, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Chronos, eşten eşe kriptografik sanal para birimi
+Exec=chronos-qt %u
+Terminal=false
+Type=Application
+Icon=chronos128
+MimeType=x-scheme-handler/chronos;
+Categories=Office;Finance;
